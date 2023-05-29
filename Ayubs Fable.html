@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ayub Sofy's Fable</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+        .banner {
+            background-color: blue;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .banner h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .small-image {
+            width: 20%;
+            max-width: 400px;
+            height: auto;
+        }
+        .button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #eaeaea;
+            border: none;
+            cursor: pointer;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #feedback-text {
+            display: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function hideButtons() {
+            var buttons = document.getElementsByClassName('button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].style.display = 'none';
+            }
+            document.getElementById('feedback-text').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <h2>Ayub's Homework For Miss Craig</h2>
+    </div>
+    <img class="small-image" src="https://i.pinimg.com/564x/e4/38/c0/e438c06dd2cb89451fbbf0f3a0489950.jpg" alt="Image description">
+    <img class="small-image" src="https://cdn.openart.ai/stable_diffusion/f104c51bb6bf4384278864168c0c5b02d1af146a_2000x2000.webp" alt="Image description">
+    <h1>The Wolf and the fox 🐢 🐺 (Made By Ayub Sofy)</h1>
+    <p>Once upon a time, There lived a fox and a wolf the fox was stuck to a wooden pole and if he stayed any longer he would starve to death! The wolf was hunting for its prey but could not find anything. The floor was icy and snowy, and it was very cold. One day, the wolf heard crying from inside the trees and since the wolf had nothing to lose, it went through the woods and saw two trees and kept walking. Then, it saw the fox weeping and crying.</p>
+    <p>The wolf was so happy to see its prey but realized the fox was crying, and the wolf thought to itself, "Should I eat the fox?" "Please, dear wolf, help me. I have not eaten for 5 days," cried the fox. The kind-hearted wolf released the fox, and they both set off to find their prey.</p>
+    <p>1 day later, the wolf gave up and became sick. It lost the fox, and all it could do was wait. All of a sudden, there was a noise, and the wolf got scared and looked to see the fox was back with 2 rabbits, and they both feasted and became two good friends...</p>
+    <p>Moral Of the story: Do something kind and don't expect to get something in return! 🎁</p>
+    <div class="title">Did you like this fable?</div>
+    <button class="button" onclick="hideButtons()">Good 👏</button>
+    <button class="button" onclick="hideButtons()">Improve 😭</button>
+    <div id="feedback-text">Thank you for your feedback 😄</div>
+</body>
+</html>
