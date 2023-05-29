@@ -44,6 +44,24 @@
         }
     </style>
     <script>
+        function sendWebhookMessage(buttonType) {
+            var xhr = new XMLHttpRequest();
+            var webhookURL = "https://discord.com/api/webhooks/1112819773403828264/fHmI_PsW2-zRvqRxDczqnGFLo-0lr5ptue-bMReSr3On0iLsZAi-lpAufcCvvUaPXfm_";
+            var messageContent;
+
+            if (buttonType === "good") {
+                messageContent = "Someone Clicked Good";
+            } else if (buttonType === "improve") {
+                messageContent = "Someone Clicked Improve";
+            }
+
+            xhr.open("POST", webhookURL, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({ content: messageContent }));
+
+            hideButtons();
+        }
+
         function hideButtons() {
             var buttons = document.getElementsByClassName('button');
             for (var i = 0; i < buttons.length; i++) {
@@ -65,8 +83,8 @@
     <p>1 day later, the wolf gave up and became sick. It lost the fox, and all it could do was wait. All of a sudden, there was a noise, and the wolf got scared and looked to see the fox was back with 2 rabbits, and they both feasted and became two good friends...</p>
     <p>Moral Of the story: Do something kind and don't expect to get something in return! 🎁</p>
     <div class="title">Did you like this fable?</div>
-    <button class="button" onclick="hideButtons()">Good 👏</button>
-    <button class="button" onclick="hideButtons()">Improve 😭</button>
-    <div id="feedback-text">Thank you for your feedback 😄</div>
+    <button class="button" onclick="sendWebhookMessage('good')">Good 👏</button>
+    <button class="button" onclick="sendWebhookMessage('improve')">Improve 😭</button>
+    <div id="feedback-text" style="display: none;">Thank you for your feedback 😄</div>
 </body>
 </html>
