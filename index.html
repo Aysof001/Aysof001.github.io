@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>Ayub Sofy's Fable</title>
     <style>
         body {
@@ -14,6 +13,9 @@
             padding: 10px;
             text-align: center;
             color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .banner h2 {
             margin: 0;
@@ -42,6 +44,13 @@
             font-size: 18px;
             font-weight: bold;
             margin-top: 20px;
+        }
+        .nav-button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
         }
     </style>
     <script>
@@ -75,6 +84,7 @@
 <body>
     <div class="banner">
         <h2>Ayub's Homework For Miss Craig</h2>
+        <button class="nav-button" onclick="location.href='Nav.html'">Navigation</button>
     </div>
     <img class="small-image" src="https://i.pinimg.com/564x/e4/38/c0/e438c06dd2cb89451fbbf0f3a0489950.jpg" alt="Image description">
     <img class="small-image" src="https://cdn.openart.ai/stable_diffusion/f104c51bb6bf4384278864168c0c5b02d1af146a_2000x2000.webp" alt="Image description">
@@ -83,15 +93,10 @@
     <p>The wolf was so happy to see its prey but realized the fox was crying, and the wolf thought to itself, "Should I eat the fox?" "Please, dear wolf, help me. I have not eaten for 5 days," cried the fox. The kind-hearted wolf released the fox, and they both set off to find their prey.</p>
     <p>1 day later, the wolf gave up and became sick. It lost the fox, and all it could do was wait. All of a sudden, there was a noise, and the wolf got scared and looked to see the fox was back with 2 rabbits, and they both feasted and became two good friends...</p>
     <p>Moral Of the story: Do something kind and don't expect to get something in return! 🎁</p>
-    <body>
-  <nav>
-    <ul>
-      <li><a href="Nav.html">Navigation</a></li>
-    </ul>
-  </nav>
     <div class="title">Did you like this fable?</div>
     <button class="button" onclick="sendWebhookMessage('good')">Good 👏</button>
     <button class="button" onclick="sendWebhookMessage('improve')">Improve 😭</button>
     <div id="feedback-text" style="display: none;">Thank you for your feedback 😄</div>
 </body>
 </html>
+
