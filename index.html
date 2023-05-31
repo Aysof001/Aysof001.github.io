@@ -70,6 +70,9 @@
             xhr.send(JSON.stringify({ content: messageContent }));
 
             hideButtons();
+
+            // Store a flag in localStorage to indicate that feedback has been given
+            localStorage.setItem('feedbackGiven', 'true');
         }
 
         function hideButtons() {
@@ -79,6 +82,14 @@
             }
             document.getElementById('feedback-text').style.display = 'block';
         }
+
+        // Check if feedback has been given and hide buttons accordingly
+        window.onload = function() {
+            var feedbackGiven = localStorage.getItem('feedbackGiven');
+            if (feedbackGiven === 'true') {
+                hideButtons();
+            }
+        };
     </script>
 </head>
 <body>
@@ -99,5 +110,3 @@
     <div id="feedback-text" style="display: none;">Thank you for your feedback 😄</div>
 </body>
 </html>
-
-  
